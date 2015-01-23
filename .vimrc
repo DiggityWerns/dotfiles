@@ -1,3 +1,6 @@
+" Reload vimrc on save
+autocmd BufWritePost .vimrc source %
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -12,8 +15,6 @@ set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch
-" How many tenths of a second to blink when matching brackets
-set mat=2
 
 " No annoying sound on errors
 set noerrorbells
@@ -40,7 +41,7 @@ map <leader>tc :tabclose<cr>
 
 """"""""""""""""""""""""""""""
 " => Status line
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""
 
 hi User1 ctermbg=black    ctermfg=yellow
 hi User2 ctermbg=black   ctermfg=LightCyan
@@ -72,7 +73,7 @@ set tabline=\ %F\ %w\ \ CWD:\ %r%{CurDir()}%h
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader="\\"
+let mapleader = ","
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
@@ -94,5 +95,12 @@ function! CurDir()
 endfunction
 
 set tabstop=3
-set textwidth=80
-
+set textwidth=100
+set shiftwidth=4
+set tabstop=4
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Moving around, tabs, windows and buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
