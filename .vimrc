@@ -36,8 +36,11 @@ set background=dark
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>tc :tabclose<cr>
+"map <leader>tn :tabnew<cr>
+"map <leader>tc :tabclose<cr>
+nnoremap <S-Tab> :tabprevious<CR>
+nnoremap <Tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -67,9 +70,6 @@ set statusline+=%6*%20(%<%p%%%)           " offset
 " Always show the tabline
 set showtabline=2
 
-" Format the tab line
-set tabline=\ %F\ %w\ \ CWD:\ %r%{CurDir()}%h
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -95,9 +95,9 @@ function! CurDir()
 endfunction
 
 set tabstop=3
+set expandtab
 set textwidth=100
 set shiftwidth=4
-set tabstop=4
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
