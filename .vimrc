@@ -97,7 +97,12 @@ endfunction
 set tabstop=3
 set expandtab
 set textwidth=100
-set shiftwidth=4
+set shiftwidth=3
+
+if has("autocmd")
+   autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+   autocmd FileType c,h set tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
