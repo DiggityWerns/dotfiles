@@ -22,6 +22,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Don't create swap files
+set noswapfile
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -94,6 +97,7 @@ function! CurDir()
 	return curdir
 endfunction
 
+set smartindent
 set tabstop=3
 set expandtab
 set textwidth=100
