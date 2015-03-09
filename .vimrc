@@ -73,6 +73,9 @@ set statusline+=%6*%20(%<%p%%%)           " offset
 " Always show the tabline
 set showtabline=2
 
+" Set max tabs
+set tabpagemax=25
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
