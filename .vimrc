@@ -116,3 +116,9 @@ endif
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Makefile
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" wm -> w and then make. I find myself doing this often
+command WM w | make
