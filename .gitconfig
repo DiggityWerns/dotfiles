@@ -16,3 +16,8 @@
     llog = log --date=local
 [color]
 	ui = auto
+[user]
+	email = david.andrew.werner@gmail.com
+	name = Dave Werner
+[push]
+	default = matching
