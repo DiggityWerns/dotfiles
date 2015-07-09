@@ -109,6 +109,7 @@ set shiftwidth=3
 if has("autocmd")
    autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
    autocmd FileType c,h set tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+   autocmd FileType tex set tabstop=4 shiftwidth=4 softtabstop=0 expandtab
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -122,3 +123,11 @@ map k gk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " wm -> w and then make. I find myself doing this often
 command WM w | make
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute pathogen#infect()
+call pathogen#helptags()
+let g:email = "daw77@drexel.edu"
+let g:user = "David Werner"
