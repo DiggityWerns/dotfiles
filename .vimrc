@@ -1,6 +1,3 @@
-" Reload vimrc on save
-autocmd BufWritePost .vimrc source %
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -31,8 +28,7 @@ set noswapfile
 " Enable syntax highlighting
 syntax enable
 
-"colorscheme desert
-set background=dark
+colorscheme evening
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
