@@ -97,6 +97,7 @@ map <leader>s? z=
 function! CurDir()
 	let curdir = substitute(getcwd(), '/home/daw77/', "~/", "g")
 	let curdir = substitute(curdir, '/home/davidwerner/', "~/", "g")
+	let curdir = substitute(curdir, '/h/dwerne01/', "~/", "g")
 	return curdir
 endfunction
 
@@ -108,7 +109,7 @@ set shiftwidth=3
 
 if has("autocmd")
    autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
-   autocmd FileType c,h set tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+   autocmd FileType c,h,m,vhdl set tabstop=2 shiftwidth=2 softtabstop=0 expandtab
    autocmd FileType tex set tabstop=4 shiftwidth=4 softtabstop=0 expandtab
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -123,11 +124,3 @@ map k gk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " wm -> w and then make. I find myself doing this often
 command WM w | make
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-execute pathogen#infect()
-call pathogen#helptags()
-let g:email = "daw77@drexel.edu"
-let g:user = "David Werner"
